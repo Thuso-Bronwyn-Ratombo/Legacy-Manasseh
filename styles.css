@@ -5,7 +5,7 @@
 
 .sidebar {
     background-color: #2d3e4f;
-    width: 329px;
+    width: 300px;
     height: 100%;
     position: fixed;
     top: 0;
@@ -39,3 +39,8 @@
     right: 0;
 }
 
+.main {
+  margin-left: 329px;
+  display: block;
+  /* padding: 20px; */
+}
