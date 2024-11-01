@@ -16,8 +16,6 @@ body, html {
 }
 
 
-
-/* Sidebar Styling */
 .sidebar {
     background-color: #2d3e50;
     width: 330px;
@@ -34,11 +32,10 @@ body, html {
 }
 
 
-
 .brand-text {
     color: #e63946;
-    font-weight: lighter;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 50px;
     margin-top: 50%;
 }
 
@@ -82,8 +79,8 @@ body, html {
 }
 
 
-/* Main Content Styling */
 .main-content {
+    font-family: 'Oswald', sans-serif;
     margin-left: 330px;
     margin-top: 0;
     padding: 0;
@@ -125,7 +122,7 @@ body, html {
     
 }
 
-/* Grid container setup */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Responsive columns */
@@ -134,7 +131,7 @@ body, html {
     padding-inline: 80px;
   }
   
-  /* Grid item setup */
+
 .grid-item {
     width: 100%;
     padding-top: 100%; /* Makes each item a square */
@@ -142,12 +139,6 @@ body, html {
     background-position:top; /* Center the image */
     background-repeat: no-repeat;
     border-radius: 8px; /* Optional: rounds corners */
-}
-
-
-.give-title{
-    text-align: center;
-    padding: 30px;
 }
 
 
@@ -214,7 +205,6 @@ form{
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 19px;
-   
     font-weight: 400;
 }
 
@@ -247,7 +237,7 @@ form{
     margin-bottom: 5px;
 }
 
-.contact-form p {
+.subheading {
     font-size: 16px;
     color: #777;
     margin-bottom: 20px;
@@ -305,23 +295,92 @@ button:hover {
     color: #e63946;
 }
 
+.titles{
+    font-size: 38px;
+    font-weight: 400;
+}
+
 .give{
     color: black;
-}
-
-.pay-row{
-    display: flex;
-    justify-content: space-between; /* Adds equal space between each box */
-    padding: 10px; /* Optional: adds padding around the container */
-}
-.pay-box{
-    background-color: #ddd; /* Example styling */
-    padding: 20px;
     text-align: center;
-    flex: 1; /* Optional: makes all boxes the same width */
-    margin: 0 10px;
 }
 
-.subheading{
-    margin-bottom: 30px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container styling */
+.box-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
 }
+
+/* Box styling */
+.box {
+    position: relative;
+    width: 150px;
+    height: 150px; /* Set an initial fixed height */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Enlarge on hover */
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Image styling */
+.box img {
+    width: 70%;
+    height: auto;
+    margin: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Info box (initially hidden) */
+.info {
+    opacity: 0;
+    max-height: 0; /* Collapsed state */
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    padding: 0 10px;
+}
+
+/* Box content */
+.box p {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Expand and show info when box is active */
+.box.active {
+    height: auto; /* Allow the height to expand based on content */
+    transform: scale(1.05); /* Slight enlarge effect */
+}
+
+.box.active .info {
+    opacity: 1;
+    max-height: 200px; /* Enough to fit content */
+    padding: 10px;
+}
+
