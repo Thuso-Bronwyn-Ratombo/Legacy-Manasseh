@@ -323,7 +323,7 @@ button:hover {
 /* Container styling */
 .box-container {
     display: flex;
-    gap: 20px;
+    gap: 150px;
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
@@ -333,11 +333,11 @@ button:hover {
 .box {
     position: relative;
     width: 150px;
-    height: 150px; /* Set an initial fixed height */
+    height: 200px; /* Set an initial fixed height */
     background-color: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    /* overflow: hidden; */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -360,7 +360,7 @@ button:hover {
 .info {
     opacity: 0;
     max-height: 0; /* Collapsed state */
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: max-height 0.3s ease, opacity 0.3s ease;
     padding: 0 10px;
 }
@@ -382,5 +382,62 @@ button:hover {
     opacity: 1;
     max-height: 200px; /* Enough to fit content */
     padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container styling */
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Card styling */
+.card {
+    width: 200px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+/* Logo styling */
+.card-logo {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* Card number styling */
+.card-number {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Card info styling */
+.card-info {
+    font-size: 14px;
+    color: #333;
+}
+
+.card-info span {
+    display: block;
+    margin: 5px 0;
 }
 
