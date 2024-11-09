@@ -331,77 +331,73 @@ button:hover {
 
 
 
-/* .carousel {
+.carousel {
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
     height: 500px;
-}
+    justify-content: center;
+  }
 
-.carousel div {
+  .carousel div {
     width: 180px;
     height: 320px;
     background-color: #ccc;
     border-radius: 15px;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0.6;
-}
+    position: absolute;
+  }
 
-.carousel .active {
-    transform: scale(2);
+  .carousel .active {
+    transform: scale(1.2) translateX(0);
     opacity: 1;
-    z-index: 1;
-} */
+    z-index: 3;
+  }
 
-
-
-
-
-
-
-
-
-/* .carousel .left {
-    transform: scale(0.9) translateX(-60px);
+  .carousel .left {
+    transform: scale(0.9) translateX(-140px);
     z-index: 2;
-}
+  }
 
-.carousel .right {
-    transform: scale(0.9) translateX(60px);
+  .carousel .right {
+    transform: scale(0.9) translateX(140px);
     z-index: 2;
-} */
+  }
 
-/* .carousel .far-left {
-    transform: scale(0.8) translateX(60px);
+  .carousel .far-left {
+    transform: scale(0.8) translateX(-200px);
     opacity: 0.4;
     z-index: 1;
-}
+  }
 
-.carousel .far-right {
-    transform: scale(0.8) translateX(-60px);
+  .carousel .far-right {
+    transform: scale(0.8) translateX(200px);
     opacity: 0.4;
     z-index: 1;
-}
+  }
 
-.carousel .prev, .carousel .next {
+  .carousel .prev, .carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    background-color: #e63946;
+    background-color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
     color: #666;
-}
+  }
 
-.carousel .prev {
-    margin-top: 0;
-    margin-right: 30px;
-}
-.carousel .next {
-    margin-top: 0;
-    margin-left: 30px;
-} */
+  .carousel .prev { left: 0px; }
+  .carousel .next { right: 40px; }
+
+  /* New CSS for the 'smaller' class */
+  .carousel-item.smaller {
+    transform: scale(0.5); /* Make the divs smaller */
+    opacity: 0.2;}
 
 
 
