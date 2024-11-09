@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incredible</title>
+    <title>Legacy Manasseh</title>
     <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="tests.css">
 </head>
 <body>
     <div class="container">
@@ -98,89 +99,20 @@
                 <h1 class="titles">SOW A SEED</h1>
                 <div class="subheading">Give, and it will be given to you</div>
 
-                <div class="box-container">
 
-                    <div class="box" onclick="toggleBox(this)">
-                        <img src="FNB South Africa_id-_LyWQtG_1.png" alt="Image 1">
-                        <div class="info">
-                            <div>Send an E-Wallet to this number:</div>
-                            <div>123456789</div>
-                        </div>
-                    </div>
-                    <div class="box" onclick="toggleBox(this)">
-                        <img src="Capitec Bank_idvCxke857_0.svg" alt="Image 2">
-                        <div class="info">
-                            <div style="background-image: url('Capitec\ Bank_idMEZlcTA3_0.svg');"></div>
-                            <div>Account number: 123456789</div>
-                            <div>Phone number: 123456789</div>
-                        </div>
-                    </div>
-                    <div class="box" onclick="toggleBox(this)">
-                        <img src="PayPal_Symbol_0.svg" alt="Image 3">
-                        <div class="info">
-                            <div>Click the link below to Paypal me</div>
-                            <a href="https://www.paypal.com/paypalme/proph1">
-                                <div style="background-image: url('PayPal_Logo_Alternative_0.svg');"></div>
-                            </a>
-                        </div>
-                    </div>
+                <div class="carousel">
+                    <button class="prev" onclick="scrollCarousel(-1)">&#10094;</button>
+                    <div class="carousel-item" style="background-color: #e0e0e0;"></div>
+                    <div class="carousel-item active" style="background-color: #e0e0e0;"></div>
+                    <div class="carousel-item" style="background-color: #e0e0e0;"></div>
+                    <button class="next" onclick="scrollCarousel(1)">&#10095;</button>
+                </div>        
 
-                </div>
-
-                <div class="card-container">
-                    <div class="card">
-                        <img src="FNB South Africa_id-_LyWQtG_1.png" alt="Visa" class="card-logo">
-                        <div class="card-number">**** **** **** 1060</div>
-                        <div class="card-info">
-                            <span><strong>Expiry date:</strong> 10/16</span>
-                            <span><strong>Name:</strong> Kumar</span>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="Capitec Bank_idvCxke857_0.svg" alt="MasterCard" class="card-logo">
-                        <div class="card-number">**** **** **** 1060</div>
-                        <div class="card-info">
-                            <span><strong>Expiry date:</strong> 10/16</span>
-                            <span><strong>Name:</strong> Kumar</span>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <img src="PayPal_Logo_Alternative_0.svg" alt="Discover" class="card-logo">
-                        <div class="card-number">**** **** **** 1060</div>
-                        <div class="card-info">
-                            <span><strong>Expiry date:</strong> 10/16</span>
-                            <span><strong>Name:</strong> Kumar</span>
-                        </div>
-                    </div>
-                </div>
                 
             </section>
             
 
-            <section id="contact" class="contact">
-                <form class="contact-form">
-                    <h1>CONTACT FORM</h1>
-                    <p class="subheading">Send your name and number or email address, and the prophet will contact you</p>
-                    <div class="input-group">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <select id="contact-type" onchange="toggleContactInput()">
-                            <option value="email">Email</option>
-                            <option value="phone">Phone Number</option>
-                        </select>
-                    
-                        <!-- Email input field -->
-                        <input type="email" id="email-input" name="email" placeholder="Email" required>
-                    
-                        <!-- Phone number input field, initially hidden -->
-                        <input type="tel" id="phone-input" name="phone" placeholder="Phone Number" style="display: none;">
-                    </div>
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-                
-            </section>
+        
             <footer>
                 <div class="footer">
                     This website was created by <em>Thuso Bronwyn Ratombo</em>
@@ -192,29 +124,50 @@
         </main>
     </div>
 
-    <script>
-        function toggleContactInput() {
-        const contactType = document.getElementById("contact-type").value;
-        const emailInput = document.getElementById("email-input");
-        const phoneInput = document.getElementById("phone-input");
+    
 
-        if (contactType === "email") {
-            emailInput.style.display = "block";
-            phoneInput.style.display = "none";
-        } else {
-            emailInput.style.display = "none";
-            phoneInput.style.display = "block";
-        }
-        }
+<script>
+  const items = document.querySelectorAll('.carousel-item');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  let currentIndex = 1;
 
-        function toggleBox(box) {
-        // Toggle the 'active' class to expand and show information
-        box.classList.toggle('active');
-        }
+  function updateCarousel() {
+    // Reset classes for all items
+    items.forEach(item => item.classList.remove('active', 'left', 'right', 'far-left', 'far-right'));
+
+    // Add 'active' class to the current item
+    items[currentIndex].classList.add('active');
+
+    // Add conditional classes for layering effect
+    if (currentIndex > 0) {
+      items[currentIndex - 1].classList.add('left');
+    }
+    if (currentIndex > 1) {
+      items[currentIndex - 2].classList.add('far-left');
+    }
+    if (currentIndex < items.length - 1) {
+      items[currentIndex + 1].classList.add('right');
+    }
+    if (currentIndex < items.length - 2) {
+      items[currentIndex + 2].classList.add('far-right');
+    }
+
+    // Hide/show buttons based on current index
+    prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
+    nextButton.style.display = currentIndex === items.length - 1 ? 'none' : 'block';
+  }
+
+  function scrollCarousel(direction) {
+    items[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + direction + items.length) % items.length;
+    updateCarousel();
+  }
+
+  // Initial check for buttons and layout
+  updateCarousel();
 
 
-
-
-    </script>
+</script>
 </body>
 </html>

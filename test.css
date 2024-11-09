@@ -320,124 +320,105 @@ button:hover {
 
 
 
-/* Container styling */
-.box-container {
+
+
+
+
+
+
+
+
+
+
+
+/* .carousel {
     display: flex;
-    gap: 150px;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
+    height: 500px;
 }
 
-/* Box styling */
-.box {
-    position: relative;
-    width: 150px;
-    height: 200px; /* Set an initial fixed height */
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* overflow: hidden; */
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.carousel div {
+    width: 180px;
+    height: 320px;
+    background-color: #ccc;
+    border-radius: 15px;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.6;
 }
 
-/* Enlarge on hover */
-.box:hover {
-    transform: scale(1.05);
-}
-
-/* Image styling */
-.box img {
-    width: 70%;
-    height: auto;
-    margin: 20px;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-/* Info box (initially hidden) */
-.info {
-    opacity: 0;
-    max-height: 0; /* Collapsed state */
-    /* overflow: hidden; */
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    padding: 0 10px;
-}
-
-/* Box content */
-.box p {
-    padding: 10px;
-    font-size: 14px;
-    color: #333;
-}
-
-/* Expand and show info when box is active */
-.box.active {
-    height: auto; /* Allow the height to expand based on content */
-    transform: scale(1.05); /* Slight enlarge effect */
-}
-
-.box.active .info {
+.carousel .active {
+    transform: scale(2);
     opacity: 1;
-    max-height: 200px; /* Enough to fit content */
-    padding: 10px;
+    z-index: 1;
+} */
+
+
+
+
+
+
+
+
+
+/* .carousel .left {
+    transform: scale(0.9) translateX(-60px);
+    z-index: 2;
 }
 
+.carousel .right {
+    transform: scale(0.9) translateX(60px);
+    z-index: 2;
+} */
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Container styling */
-.card-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
+/* .carousel .far-left {
+    transform: scale(0.8) translateX(60px);
+    opacity: 0.4;
+    z-index: 1;
 }
 
-/* Card styling */
-.card {
-    width: 200px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    text-align: left;
+.carousel .far-right {
+    transform: scale(0.8) translateX(-60px);
+    opacity: 0.4;
+    z-index: 1;
 }
 
-/* Logo styling */
-.card-logo {
-    width: 60px;
-    margin-bottom: 15px;
-}
-
-/* Card number styling */
-.card-number {
+.carousel .prev, .carousel .next {
+    width: 30px;
+    height: 30px;
+    background-color: #e63946;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
     font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
+    color: #666;
 }
 
-/* Card info styling */
-.card-info {
-    font-size: 14px;
-    color: #333;
+.carousel .prev {
+    margin-top: 0;
+    margin-right: 30px;
 }
+.carousel .next {
+    margin-top: 0;
+    margin-left: 30px;
+} */
 
-.card-info span {
-    display: block;
-    margin: 5px 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
