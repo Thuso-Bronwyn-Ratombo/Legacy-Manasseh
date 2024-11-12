@@ -89,10 +89,9 @@ body, html {
 }
 
 .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("pray_sqr.jpg");
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    /* padding: 40px; */
-    /* border-radius: 10px; */
+    background-image: url(pictures/pray_sqr.jpg);
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    backdrop-filter: blur(20px); /* Adjust the blur intensity as needed */
     background-size: cover; /* Makes the image cover the entire banner */
     height: 100vh; /* Full viewport height */
     padding: 0;
@@ -108,7 +107,7 @@ body, html {
     display: flex;
     justify-content: space-between; /* Adds equal space between each box */
     padding: 10px;
-    background-color: #cf404d;
+    background-color: #457b9d;
     padding: 50px;
     margin: auto;
     gap: 30px;
@@ -119,16 +118,21 @@ body, html {
     flex: 1;
     border-style:solid;
     border-radius: 10px;
+    padding: 50px;
     
+}
+
+
+.gallery{
+    background-color: #ffffff;
 }
 
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Responsive columns */
-    gap: 10px; /* Space between grid items */
-    padding-top: 80px;
-    padding-inline: 80px;
+    gap: 20px; /* Space between grid items */
+    padding: 100px;
   }
   
 
@@ -138,7 +142,7 @@ body, html {
     background-size: cover; /* Scale background to cover the entire div */
     background-position:top; /* Center the image */
     background-repeat: no-repeat;
-    border-radius: 8px; /* Optional: rounds corners */
+    /* border-radius: 8px; */
 }
 
 
@@ -158,15 +162,15 @@ form{
 }
 
 .banner h1 {
-    font-size: 36px;
+    font-size: 60px;
     margin-bottom: 15px;
     margin-top: 0;
     
 }
 
 .banner p {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin: 70px 0;
 }
 
 .button-group {
@@ -269,6 +273,8 @@ textarea {
     resize: vertical;
     margin-bottom: 20px;
 }
+
+
 input{
     margin-bottom: 10px;
 }
@@ -298,123 +304,105 @@ button:hover {
 .titles{
     font-size: 38px;
     font-weight: 400;
+    margin: 0;
 }
 
 .give{
+    padding: 50px;
     color: black;
     text-align: center;
+    background-color: #ccc;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+hr{ color: #e63946;}
 
 
 .carousel {
     display: flex;
     align-items: center;
-    position: relative;
-    height: 500px;
+    /* position: relative; */
+    height: 700px;
     justify-content: center;
   }
 
-  .carousel div {
-    width: 180px;
-    height: 320px;
-    background-color: #ccc;
+  .carousel-item {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
     border-radius: 15px;
     transition: transform 0.3s, opacity 0.3s;
-    opacity: 0.6;
-    position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* soft shadow */
+                0 6px 20px rgba(0, 0, 0, 0.15);
   }
 
   .carousel .active {
-    transform: scale(1.2) translateX(0);
+    transform: scale(1.2) translateX(0px);
     opacity: 1;
     z-index: 3;
   }
 
+  /* .carousel .active:hover{
+    transform: scale(1.5);
+  } */
+
   .carousel .left {
-    transform: scale(0.9) translateX(-140px);
+    transform: scale(0.9) translateX(0);
+    opacity: 0.8;
     z-index: 2;
   }
 
   .carousel .right {
-    transform: scale(0.9) translateX(140px);
+    transform: scale(0.9) translateX(0);
+    opacity: 0.8;
     z-index: 2;
   }
 
   .carousel .far-left {
-    transform: scale(0.8) translateX(-200px);
+    transform: scale(0.8) translateX(80px);
     opacity: 0.4;
-    z-index: 1;
+    z-index: 3;
   }
 
   .carousel .far-right {
-    transform: scale(0.8) translateX(200px);
+    transform: scale(0.8) translateX(-80px);
     opacity: 0.4;
-    z-index: 1;
+    z-index: 3;
   }
 
   .carousel .prev, .carousel .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: white;
+    /* position: absolute; */
+    width: 60px;
+    height: 60px;
+    background-color: #e63946;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
-    color: #666;
+    color: #b9b9b9;
+    
+    
   }
 
-  .carousel .prev { left: 0px; }
-  .carousel .next { right: 40px; }
+  .carousel .prev { margin: 0;}
+  .carousel .next { margin: 0; }
 
-  /* New CSS for the 'smaller' class */
-  .carousel-item.smaller {
-    transform: scale(0.5); /* Make the divs smaller */
-    opacity: 0.2;}
+  .logo{
+    padding-top: 20px;
+    width: 150px;
+    height: 150px;
+  }
 
+  .paypal-link {
+    display: block;
+    margin-top: auto;
+    padding-bottom: 20px;
 
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .paypal-link img{
+    height: 50px;
+}
 
