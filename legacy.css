@@ -18,7 +18,7 @@ body, html {
 
 .sidebar {
     background-color: #2d3e50;
-    width: 330px;
+    width: 20%;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -36,7 +36,7 @@ body, html {
     color: #e63946;
     font-weight: 400;
     font-size: 50px;
-    margin-top: 50%;
+    margin-top: 25%;
 }
 
 .nav-links {
@@ -81,7 +81,7 @@ body, html {
 
 .main-content {
     font-family: 'Oswald', sans-serif;
-    margin-left: 330px;
+    margin-left: 20%;
     margin-top: 0;
     padding: 0;
     flex: 1;
@@ -90,7 +90,7 @@ body, html {
 
 .banner {
     background-image: url(pictures/pray_sqr.jpg);
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+
     backdrop-filter: blur(20px); /* Adjust the blur intensity as needed */
     background-size: cover; /* Makes the image cover the entire banner */
     height: 100vh; /* Full viewport height */
@@ -170,7 +170,7 @@ form{
 
 .banner p {
     font-size: 20px;
-    margin: 70px 0;
+    /* margin: 70px 0; */
 }
 
 .button-group {
@@ -344,9 +344,6 @@ hr{ color: #e63946;}
     z-index: 3;
   }
 
-  /* .carousel .active:hover{
-    transform: scale(1.5);
-  } */
 
   .carousel .left {
     transform: scale(0.9) translateX(0);
