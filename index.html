@@ -40,9 +40,8 @@
                 
             </nav>
 
-            <div class="hamburger-button w-nav-button" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
-                <!-- Use a Unicode character for the hamburger icon -->
-                <span style="font-size: 24px;">&#9776;</span> <!-- Unicode for hamburger menu -->
+            <div class="hamburger-button w-nav-button" aria-label="menu" role="button" tabindex="0">
+                <span style="font-size: 24px;">&#9776;</span>
             </div>
             
         </div>
@@ -246,6 +245,22 @@
                 </div>
             </footer>
         </div>
+
+        <script>
+            // JavaScript to handle hamburger menu toggling
+            document.querySelector(".hamburger-button").addEventListener("click", function () {
+                const navMenu = document.getElementById("nav-menu");
+                navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
+            });
+
+            // Close the menu when a link is clicked
+            document.querySelectorAll(".nav-link").forEach(link => {
+                link.addEventListener("click", () => {
+                    const navMenu = document.getElementById("nav-menu");
+                    navMenu.style.display = "none";
+                });
+            });
+        </script>
 
         <!--Start of Tawk.to Script-->
     <script type="text/javascript">
