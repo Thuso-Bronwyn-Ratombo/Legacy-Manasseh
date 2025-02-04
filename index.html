@@ -28,7 +28,7 @@
     <body>
         <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" data-easing="ease" data-easing2="ease" role="banner" class="left-navigation w-nav">
 
-            <a href="home" class="logo-link w-nav-brand">
+            <a href="#home" class="logo-link w-nav-brand">
                 <h1 class="brand-text">LEGACY MANASSEH</h1>
             </a>
             <nav id="nav-menu" class="nav-menu w-nav-menu">
@@ -250,14 +250,14 @@
             // JavaScript to handle hamburger menu toggling
             document.querySelector(".hamburger-button").addEventListener("click", function () {
                 const navMenu = document.getElementById("nav-menu");
-                navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
+                navMenu.classList.toggle("active");
             });
 
             // Close the menu when a link is clicked
             document.querySelectorAll(".nav-link").forEach(link => {
                 link.addEventListener("click", () => {
                     const navMenu = document.getElementById("nav-menu");
-                    navMenu.style.display = "none";
+                    navMenu.classList.remove("active");
                 });
             });
         </script>
